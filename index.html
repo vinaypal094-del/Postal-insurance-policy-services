@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Post Office, PLI और RPLI सेवाओं की जानकारी, बचत योजनाएं और ग्राहक संपर्क फॉर्म।">
+  <meta name="keywords" content="Post Office, PLI, RPLI, Postal Life Insurance, बचत योजना, डाकघर">
+  <meta name="theme-color" content="#0b5cab">
+  <title>POSTAL INSURANCE POLICY SERVICES (LAKHAN) | PLI | RPLI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">📮 POSTAL INSURANCE POLICY SERVICES (LAKHAN)</div>
+  <nav>
+    <a href="#services">सेवाएं</a>
+    <a href="#calculator">बचत</a>
+    <a href="#form">संपर्क करें</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <p class="tag">POST OFFICE • PLI • RPLI</p>
+    <h1>POSTAL INSURANCE POLICY SERVICES (LAKHAN)</h1>
+    <p>PLI, RPLI, बचत योजनाओं और अन्य डाकघर सेवाओं के लिए जानकारी प्राप्त करें और सीधे संपर्क करें।</p>
+    <a class="btn" href="#form">जानकारी के लिए फॉर्म भरें</a>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <h2>हमारी प्रमुख सेवाएं</h2>
+  <div class="cards">
+    <div class="card"><span>🛡️</span><h3>PLI</h3><p>Postal Life Insurance से संबंधित जानकारी और मार्गदर्शन।</p></div>
+    <div class="card"><span>🌾</span><h3>RPLI</h3><p>ग्रामीण क्षेत्रों के लिए Rural Postal Life Insurance की जानकारी।</p></div>
+    <div class="card"><span>💰</span><h3>बचत योजनाएं</h3><p>डाकघर की उपलब्ध बचत योजनाओं के बारे में जानकारी।</p></div>
+    <div class="card"><span>📋</span><h3>ग्राहक सहायता</h3><p>अपनी जरूरत बताकर संपर्क अनुरोध भेजें।</p></div>
+  </div>
+</section>
+
+<section id="calculator" class="section light">
+  <h2>बचत राशि कैलकुलेटर</h2>
+  <div class="calculator">
+    <label>मासिक जमा राशि (₹)
+      <input id="monthly" type="number" min="0" placeholder="उदा. 1000">
+    </label>
+    <label>अवधि (वर्ष)
+      <input id="years" type="number" min="1" placeholder="उदा. 5">
+    </label>
+    <button class="btn" onclick="calculate()">गणना करें</button>
+    <div id="result" class="result">राशि देखने के लिए विवरण भरें।</div>
+    <small>*यह केवल साधारण अनुमान है। वास्तविक रिटर्न संबंधित योजना के नियम/दर पर निर्भर करेगा।</small>
+  </div>
+</section>
+
+<section id="form" class="section">
+  <h2>ग्राहक संपर्क फॉर्म</h2>
+  <p class="center">नीचे जानकारी भरें। Submit करने पर WhatsApp में संदेश तैयार हो जाएगा।</p>
+  <form id="contactForm">
+    <label>पूरा नाम *
+      <input id="name" required placeholder="अपना नाम लिखें">
+    </label>
+    <label>मोबाइल नंबर *
+      <input id="phone" required inputmode="numeric" pattern="[0-9]{10}" placeholder="10 अंकों का मोबाइल नंबर">
+    </label>
+    <label>गाँव / शहर
+      <input id="location" placeholder="गाँव / शहर">
+    </label>
+    <label>किस सेवा की जानकारी चाहिए?
+      <select id="service">
+        <option>PLI</option>
+        <option>RPLI</option>
+        <option>बचत योजना</option>
+        <option>Sukanya Samriddhi</option>
+        <option>Post Office Account</option>
+        <option>अन्य</option>
+      </select>
+    </label>
+    <label>आपका संदेश / आवश्यकता
+      <textarea id="message" rows="5" placeholder="अपनी जरूरत लिखें"></textarea>
+    </label>
+    <button class="btn" type="submit">📲 WhatsApp पर भेजें</button>
+  </form>
+  <p class="note">ईमेल: vinaypal094@gmail.com</p>
+</section>
+
+<footer>
+  <h3>📮 POSTAL INSURANCE POLICY SERVICES (LAKHAN)</h3>
+  <p>PLI • RPLI • Postal Insurance Policy • ग्राहक सहायता</p><p>📱 6263323352 &nbsp; | &nbsp; ✉️ vinaypal094@gmail.com</p>
+  <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
