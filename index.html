@@ -56,7 +56,52 @@
 <section id="form" class="section">
   <h2>ग्राहक संपर्क फॉर्म</h2>
   <p class="center">नीचे जानकारी भरें। Submit करने पर WhatsApp में संदेश तैयार हो जाएगा।</p>
-  <form id="contactForm">
+  <form id="contactForm"><form action="https://docs.google.com/forms/d/e/1FAIpQLSd1tS1B2uorQV_bg7d9mua_XxJz6D7mVYVrI3RyoaBAD4tZDQ/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+
+  <input type="text" name="entry.1120322706" placeholder="पूरा नाम" required>
+
+  <input type="number" name="entry.1629258103" placeholder="उम्र" required>
+
+  <input type="text" name="entry.805630553" placeholder="पिता का नाम" required>
+
+  <input type="text" name="entry.1382879029" placeholder="गांव का नाम" required>
+
+  <select name="entry.67546189" required>
+    <option value="">क्षेत्र चुनें</option>
+    <option value="Rural">Rural</option>
+    <option value="Urban">Urban</option>
+  </select>
+
+  <input type="tel" name="entry.1758635175" placeholder="मोबाइल नंबर" required>
+
+  <input type="number" name="entry.1126943803" placeholder="मासिक प्रीमियम (₹)" required>
+
+  <select name="entry.1700860055" required>
+    <option value="">Policy चुनें</option>
+    <option value="PLI">PLI</option>
+    <option value="RPLI">RPLI</option>
+    <option value="ESI">ESI</option>
+  </select>
+
+  <button class="btn" type="submit">📝 आवेदन जमा करें</button>
+
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<p id="successMsg" style="display:none;color:green;font-weight:bold;margin-top:15px;">
+  धन्यवाद! आपका आवेदन सफलतापूर्वक जमा हो गया।
+</p>
+
+<script>
+let submitted = false;
+document.querySelector("iframe[name='hidden_iframe']").onload = function () {
+  if (submitted) {
+    document.getElementById("successMsg").style.display = "block";
+    document.querySelector("form").reset();
+  }
+};
+</script>
     <label>पूरा नाम *
       <input id="name" required placeholder="अपना नाम लिखें">
     </label>
